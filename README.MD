@@ -31,13 +31,13 @@ Wild Pointer: A pointer that has not been initialized to anything | Ex: int* ptr
 
 **Answer**: 
 
-Text: Machine Instructions
+Text Segment: Machine Instructions
 
-Data: Constants and Static Variables
+Data Segment: Constants and Static Variables
 
 Heap: Dynamically Allocated Space
 
-Stack: Runtime Call Stack.
+Stack: Runtime Call Stack
 
 # Part2: Coding  (60 Points)
 
