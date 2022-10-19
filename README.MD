@@ -8,19 +8,36 @@
 
 ### 1. How to add custom search path for header files and libraries file for gcc compiling (10 Points)
 
-**Answer**:
+**Answer**: 
+
+Header File: gcc -I\<Header File Directory Path\>
+
+Library File: gcc -L\<Library File Directory Path\>
 
 ### 2. How to create a int array of length 100 using heap memory (10 Points)
 
-**Answer**:
+**Answer**: int* array = new int[100];
 
 ### 3. Give each an example of dangling pointer and wild pointer (10 Points)
 
-**Answer**:
+**Answer**: 
+
+Dangling Pointer: A pointer pointing to a memory location that has been deleted | Ex: free(ptr);
+
+Wild Pointer: A pointer that has not been initialized to anything | Ex: int* ptr;
+
 
 ### 4. What are the four different segments of a C program runtime memory layout and what are they used of? (10 Points)
 
-**Answer**:
+**Answer**: 
+
+Text: Machine Instructions
+
+Data: Constants and Static Variables
+
+Heap: Dynamically Allocated Space
+
+Stack: Runtime Call Stack.
 
 # Part2: Coding  (60 Points)
 
