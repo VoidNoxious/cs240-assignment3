@@ -33,6 +33,22 @@ char *getLine(String *s) {
 int *solution(int L, char *S, int *res) {
     /*Complete this function*/
 
+    int index = 0, count = 1;
+    res[0] = count;
+    while (S[index] != '\0') { // Check Characters in String S...
+        int i = S[index] - 64; // First Character
+        int j = S[index + 1] - 64; // Second Character
+        if (1 <= i && i < j && j <= L) { // If Characters are Strictly Increasing...
+            count++;
+            res[index + 1] = count;
+
+        } else if (1 <= i && i >= j && j <= L) { // If Characters are Decreasing or Same...
+            count = 1;
+            res[index + 1] = count;
+        }
+        index++;
+    }
+
     return res;
 }
 
