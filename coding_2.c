@@ -33,6 +33,42 @@ char *getLine(String *s) {
 
 long solution(int l, char *S) {
     /*Complete this function*/
+    
+    int index = 0, distance = 0, left = 0, right = 0;
+
+    while (S[index] != '\0') { // Check Entire Street
+        if (S[index] == '1') { // If House Have Trash Bin...
+            index++;
+        } else if (S[index] == '0') { // If House Does Not Have Trash Bin...
+
+            for (int current = index; S[current] == '0'; current--) { // Check Left
+                left++;
+                if (current == 0) { // If First...
+                    left = 999;
+                    break;
+                }
+            }
+            for (int current = index; S[current] == '0'; current++) { // Check Right
+                right++;
+                if (current == l - 1) { // If Last...
+                    right = 999;
+                    break;
+                }
+            }
+            if (left < right) {  // Find Minimum Distance
+                distance += left;
+            } else if (left > right) {
+                distance += right;
+            } else if (left == right) {
+                distance += left;
+            }
+            left = 0;
+            right = 0;
+            index++;
+        }
+    }
+
+    return distance;
 }
 
 int main(int argc, char *argv[]) {
