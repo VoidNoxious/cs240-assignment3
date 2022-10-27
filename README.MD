@@ -16,7 +16,7 @@ Library File: gcc -L\<Library File Directory Path\>
 
 ### 2. How to create a int array of length 100 using heap memory (10 Points)
 
-**Answer**: int* array = new int[100];
+**Answer**: int *array = malloc(100 * sizeof(int));
 
 ### 3. Give each an example of dangling pointer and wild pointer (10 Points)
 
@@ -24,20 +24,19 @@ Library File: gcc -L\<Library File Directory Path\>
 
 Dangling Pointer: A pointer pointing to a memory location that has been deleted | Ex: free(ptr);
 
-Wild Pointer: A pointer that has not been initialized to anything | Ex: int* ptr;
-
+Wild Pointer: A pointer that has not been initialized to anything | Ex: int *ptr[3];
 
 ### 4. What are the four different segments of a C program runtime memory layout and what are they used of? (10 Points)
 
 **Answer**: 
 
-Text Segment: Machine Instructions
+Text: Machine Instructions (Operators)
 
-Data Segment: Constants and Static Variables
+Data: Constants and Static Variables (Constant Literals)
 
-Heap: Dynamically Allocated Space
+Heap: Dynamically Allocated Space (Malloc’d Data)
 
-Stack: Runtime Call Stack
+Stack: Runtime Call Stack (Local Variables, Return Address, and Returned Values)
 
 # Part2: Coding  (60 Points)
 
